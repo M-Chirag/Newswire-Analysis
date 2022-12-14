@@ -42,7 +42,10 @@ By deploying the LDA model, I have used pyLDAvis for visualizing the topic clust
 ![Recording 2022-12-13 at 19 46 38](https://user-images.githubusercontent.com/43926813/207500628-775404e6-82ce-4051-9914-52dbb637d9be.gif)
 
 2. Displayed below is the word cloud for each topic, the most frequently used words within the cluster are displayed in their relative font sizes. The most frequently used word has the biggest font size and as the frequency decreases the font size also decreases. This word cloud helped me identify the main theme of each cluster and assign the topic names to the LDA model.
+
 ![word_cloud](https://user-images.githubusercontent.com/43926813/207500179-d0c083f1-d9b3-437c-b287-b17d3d82039e.png)
+
+3. I have also generated bar plots for identifying the percentage of the most frequently observed terms within 6 documents. This was useful to select the relevant topics within those documents as I was looking to avoid overlaps when selecting the topics for grounded coding.
 
 ![Topic_Percent](https://user-images.githubusercontent.com/43926813/207500230-86b9f10a-29ef-4092-91d8-4e4ee0f2d1ce.png)
 
