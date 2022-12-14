@@ -38,6 +38,7 @@ Using the same set of codes, I have done grounded coding on a set of 30 document
 # Visualizations and Interpretations
 
 Below is the pyLDAvis generated topic clusters according to the documents dataset.
+By deploying the LDA model, I have used pyLDAvis for visualizing the topic clusters identified by the top 2 principal components. This visualization is exported as an HTML file and is present under the visualizations folder. These clusters are represented on a plot that places them according to their relative intertopic distance by calculating the multidimensional scaled distance. There is a slider to adjust the relevance matrix, that decides the closeness of the displayed words to a particular topic cluster center. Hovering over the topic cluster, we can also see the top 30 relevant words in that topic which is displayed as a bar plot and the relative frequency of the word with the total frequency in document collection.
 ![Recording 2022-12-13 at 19 46 38](https://user-images.githubusercontent.com/43926813/207500628-775404e6-82ce-4051-9914-52dbb637d9be.gif)
 
 ![word_cloud](https://user-images.githubusercontent.com/43926813/207500179-d0c083f1-d9b3-437c-b287-b17d3d82039e.png)
