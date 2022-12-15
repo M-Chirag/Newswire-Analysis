@@ -13,19 +13,18 @@ I intend to use the concepts we learnt in class (INFO202) to build topic cluster
 I made use of the open source data available on Reuters-Dataset (https://archive.ics.uci.edu/ml/datasets/Reuters-21578+Text+Categorization+Collection) where a large collection of news articles is maintained. The documents were assembled and indexed with categories by personnel from Reuters Ltd.
 
 2. Preprocessing: 
-Data cleaning, Exploratory Data Analysis: Based on my preliminary idea by looking at the dataset, I will be conducting 1 and 2 level data cleaning for the acquired data, preprocessing to remove superfluous terms and suppress some words, altering various versions of the same word, and finally discarding words with illegal characters.The same set of texts has been put through a preprocessor function of the text, to standardize the different forms of the words using Stemmer, and Lemmatizer. Moreover, the same has been processed through the removal of stopwords like is, am are which don't add much value to the meaning of the text.
+Data cleaning, Exploratory Data Analysis: Based on my evaluation of the dataset, I conducted 1 and 2 level data cleaning for the acquired data, preprocessing to remove superfluous terms and suppress some words, altering various versions of the same word, removing stop words and finally discarding words with illegal characters.The same set of texts has been put through a preprocessor function of the text, to standardize the different forms of the words using Stemmer, and Lemmatizer. Moreover, the same has been processed through the removal of stopwords like is, am are which don't add much value to the meaning of the text.
 
 3. Bag of Words:
 The wrangled set of texts has been processed to the word dictionary of NLTK having an extensive English Words dictionary. Using these texts, I generated embeddings by deploying the Bag of Words model. For comparison, I have also implemented generating the embeddings using tf-idf scores based on term frequency and inverse document frequency, which we can toggle when running the downstream process.
 
-<br>
 4. LDA: 
-For the current pipeline, Bag of Words is used as the underlying technique for embeddings and the model of LDA, which is an unsupervised learning method based on the probabilities of the words in the texts is used on 7769 text documents of editorials.
-Further, I have generated 10 topics from a collection of 7769 documents to enable ease of understanding the same.
+For the current pipeline, Bag of Words is used as the underlying technique for embeddings and the model of LDA, an unsupervised classification technique which is based on the probabilities of the words in the texts, is used on 7769 text documents of editorials.
+Further, I have generated 10 initial topics from a collection of 7769 documents to enable ease of understanding the same.
 Using the topic words from each of the 10 topics, I formulated tags for the categories being represented in the news articles.
 
 5. Grounded Coding and IAA score
-Using the same set of codes, I have done grounded coding on a set of 30 documents as attached in the excel file to produce the Inter Annotator Agreement Evaluation report to benchmark whether the system is good enough over human-driven evaluation systems using the Kappa score.
+Since the 10 initial topics had a lot of overlapping between clusters (as observed from the visualizations), I used 4 main themes that had the most distance between them and least overlaps as the codes. I used these final 4 codes in my LDA model and also for the grounded coding on a set of 30 documents as attached in the excel file to produce the Inter Annotator Agreement Evaluation report to benchmark whether the system is good enough over human-driven evaluation systems using the Kappa score.
 
 6. Visualizing : I intend to use a relevant visualizing generator API pyLDAvis to simplify the visualization of any vector having many dimensions and convert it into human understandable visualizations.
 
