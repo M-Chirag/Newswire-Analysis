@@ -18,7 +18,7 @@ Data cleaning, Exploratory Data Analysis: Based on my preliminary idea by lookin
 3. Bag of Words:
 The wrangled set of texts has been processed to the word dictionary of NLTK having an extensive English Words dictionary. Using these texts, I generated embeddings by deploying the Bag of Words model. For comparison, I have also implemented generating the embeddings using tf-idf scores based on term frequency and inverse document frequency, which we can toggle when running the downstream process.
 
-
+<br>
 4. LDA: 
 For the current pipeline, Bag of Words is used as the underlying technique for embeddings and the model of LDA, which is an unsupervised learning method based on the probabilities of the words in the texts is used on 7769 text documents of editorials.
 Further, I have generated 10 topics from a collection of 7769 documents to enable ease of understanding the same.
@@ -29,7 +29,7 @@ Using the same set of codes, I have done grounded coding on a set of 30 document
 
 6. Visualizing : I intend to use a relevant visualizing generator API pyLDAvis to simplify the visualization of any vector having many dimensions and convert it into human understandable visualizations.
 
-# Instructions to run the project
+# Instructions to run the code
 
 1. Download the News_Analysis.ipynb and open it on Jupyter Notebooks or Google colab.
 2. We first download and run all the dependencies of NLTK so if you have the dependencies installed, you can comment out the code in the first 3 code blocks. Next, the Reuters dataset present in the nltk corpus is imported and cleaned.
@@ -52,5 +52,22 @@ By deploying the LDA model, I have used pyLDAvis for visualizing the topic clust
 4. Finally, I plotted a histogram to analyze the frequency of documents based on the word count for each topic. 
 ![distribution_words](https://user-images.githubusercontent.com/43926813/207500239-87adea2e-bb74-4f4e-8508-85df1ade650a.png)
 
-# Conclusion:
+<br>
+# Conclusion and Kappa score:
+
+Finalized Grounded Codes after running the model and complete grounded coding. Also describes the categories for which each one of them is being used.
+POL: 	The text discusses about international relations and geo politics.
+FIN: 	A sentence talking about the stock and financial markets.
+TRADE: 	Text having mentions of international trade and commodities exchange.
+CURR: 	A sentence talking about currency and money markets in different geographies
+
+Upon evaluation, I observed a 72.5% agreement between my codes and the ones generated using LDA. I also calculated the Cohen Kappa score to measure the inter rater agreement score, and got 0.62  which indicates that there is a fair amount of agreement between both the methods used.
+
+<br>
+# References:
+
+https://radimrehurek.com/gensim/models/word2vec.html
+https://elvinouyang.github.io/project/reuters-w2v-bow-get-started/
+https://github.com/omkarsk98/NewsDataClassification
+Computational Grounded Theory: A Methodological Framework
 
